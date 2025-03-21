@@ -1,0 +1,20 @@
+<div class="p-6">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label style="font-weight: bolder;">Action</mat-label>
+            <mat-select [(ngModel)]="actionToShow" (selectionChange)="changeSelection()">
+              <mat-option *ngFor="let a of actions" [value]="a">
+                {{a}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>        
+    </div>
+  <div style="overflow-y: auto !important; height: 80vh !important;">
+    <div >
+      <div class="pt-2" *ngFor="let prod of toShowProducts;let i = index" >
+         <app-product [product]="prod" [productIndex]="i"  style="width: 800px;"></app-product>  
+       </div>
+   </div>  
+  </div>
+</div>
+

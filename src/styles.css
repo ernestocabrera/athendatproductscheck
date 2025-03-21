@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background: linear-gradient(to right, #f5f1f1, #2c2b2a);
+}
+
+.card-centro {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+  }
+
+  div::-webkit-scrollbar {
+    width: 8px;
+    opacity: 0;
+  }
+  
+  div:hover::-webkit-scrollbar {
+    opacity: 1;
+  }

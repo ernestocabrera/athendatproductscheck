@@ -1,0 +1,21 @@
+ <mat-card style="background-color: rgb(212, 183, 144);">
+        <mat-card-title-group>
+          <mat-card-title style="font-size: x-large;">
+              <div class="flex p-2">
+                 <div class="flex pr-2">
+                    <mat-checkbox   [(ngModel)]="checked" (change)="updateCheckedEvent()"></mat-checkbox>
+                 </div>
+                 <div>
+                    {{product.name}}
+                 </div>
+              </div></mat-card-title>
+          <mat-card-subtitle style="font-weight: bolder; font-size: large;">
+                {{product.proovedor}}  
+            </mat-card-subtitle>
+          <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" style="width: 80px;height: 80px;">
+        </mat-card-title-group>
+        <mat-card-content style=" font-size: large;">
+          {{product.descripcion}}
+        </mat-card-content>
+    </mat-card>
+
