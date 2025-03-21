@@ -12,10 +12,16 @@
           <mat-card-subtitle style="font-weight: bolder; font-size: large;">
                 {{product.proovedor}}  
             </mat-card-subtitle>
-          <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" style="width: 80px;height: 80px;">
+         <div *ngIf="!product.imageurl.includes('https://example.com/images')">
+            <img mat-card-md-image [src]="product.imageurl" style="width: 80px;height: 80px;">
+         </div>
+         <div *ngIf="product.imageurl.includes('https://example.com/images')">
+            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" style="width: 80px;height: 80px;">
+         </div>
         </mat-card-title-group>
         <mat-card-content style=" font-size: large;">
           {{product.descripcion}}
         </mat-card-content>
     </mat-card>
 
+    
